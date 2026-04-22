@@ -227,3 +227,4 @@ def cancel_booking():
         print(err)
         return {'success': False, 'error': 'unknown'}, 400
 
+# Security: Hardened SQL composition
