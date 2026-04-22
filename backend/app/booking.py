@@ -211,7 +211,7 @@ def cancel_booking():
 
     try:
         with g.db_conn.cursor() as cur:
-            query = psycopg2.sql.SQL(f"""
+            query = psycopg2.sql.SQL("""
             UPDATE booking
             SET period = TSTZRANGE(lower(period), NOW())
             WHERE booking_id = %(booking_id)s
